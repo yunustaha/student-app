@@ -1,5 +1,5 @@
 import React from 'react'
-import GridRow from './GridRow'
+import GridRows from './GridRows'
 
 const Grid = () => {
     return (
@@ -11,7 +11,7 @@ const Grid = () => {
                 <div>Website</div>
                 <div>Company Name</div>
             </div>
-            <GridRow />
+            <GridRows />
         </div>
     )
 }

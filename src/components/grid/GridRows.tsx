@@ -14,7 +14,7 @@ type ModalDataType = {
     handleSubmit: (values: FormDataType) => any
 }
 
-const GridRow = () => {
+const GridRows = () => {
     const [users, setUsers] = useState<Root>()
     const [skip, setSkip] = useState<number>(0)
     const [modalData, setModalData] = useState<ModalDataType>({ open: false, title: '', handleSubmit: () => { } })
@@ -48,7 +48,8 @@ const GridRow = () => {
     }
 
     const getUsers = function (right: boolean): void {
-        const skipValue = right && users && skip < users.total ? skip + 6 : skip != 0 && !right ? skip - 6 : 0;
+        const skipValue = users ? (users.users.length == 6 ? right ? skip + 6 : skip != 0 ? skip - 6 : 0 : right ? skip : skip - 6) : 0;
+
         axios({
             method: 'GET',
             url: 'https://dummyjson.com/users',
@@ -57,7 +58,6 @@ const GridRow = () => {
                 skip: skipValue
             }
         }).then((response) => {
-            console.log(response.data);
             setSkip(skipValue)
             setUsers(response.data)
         }
@@ -149,14 +149,14 @@ const GridRow = () => {
                     <div className='flex gap-6 items-center'>
                         <div className='flex items-center mr-5'>
                             <div className='text-student-gray-grid text-sm font-normal mr-1'>Rows per page:</div>
-                            <div className='text-sm font-normal text-student-gray-gridPage'>{skip}</div>
+                            <div className='text-sm font-normal text-student-gray-gridPage'>{6}</div>
                             <Dropdown />
                         </div>
                         <div className='text-student-gray-grid text-sm font-normal'>
                             {skip} of {users ? users.total : ''}
                         </div>
                         <div className='flex gap-1'>
-                            <ArrowLeft onClick={() => getUsers(false)} className='cursor-pointer'/>
+                            <ArrowLeft onClick={() => getUsers(false)} className='cursor-pointer' />
                             <ArrowRight onClick={() => getUsers(true)} className='cursor-pointer' />
                         </div>
                     </div>
@@ -168,4 +168,4 @@ const GridRow = () => {
     )
 }
 
-export default GridRow
+export default GridRows
