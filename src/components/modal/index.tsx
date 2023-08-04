@@ -7,7 +7,8 @@ type ModalProps = {
     showModal: boolean,
     setShowModal: (React.Dispatch<boolean>),
     title: string,
-    handleSubmit: (values: FormDataType) => any
+    handleSubmit: (values: FormDataType) => any,
+    data?: FormDataType
 }
 
 export type FormDataType = {
@@ -19,9 +20,9 @@ export type FormDataType = {
     domain: string,
 }
 
-const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, handleSubmit, title }) => {
+const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, handleSubmit, title, data }) => {
     const formik = useFormik<FormDataType>({
-        initialValues: {
+        initialValues: data ?? {
             firstName: "",
             lastName: "",
             email: "",
@@ -39,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, handleSubmit, ti
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative my-6 mx-auto w-1/3 max-w-3xl">
+                        <div className="relative my-6 mx-auto w-2/3 max-w-3xl">
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 <div className="flex items-center justify-between gap-2 p-5 border-b border-solid border-slate-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">
@@ -100,7 +101,7 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, handleSubmit, ti
                                         <input
                                             id="domain"
                                             name="domain"
-                                            type="url"
+                                            type="text"
                                             required
                                             placeholder="Website"
                                             className='student-input'
