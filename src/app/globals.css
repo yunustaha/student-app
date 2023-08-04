@@ -11,5 +11,5 @@ body {
 
 .student-button {
   @apply
-  bg-student-orange w-full py-4 rounded text-white text-sm font-medium
+  bg-student-orange w-full p-3 rounded text-white text-sm font-medium
 }
