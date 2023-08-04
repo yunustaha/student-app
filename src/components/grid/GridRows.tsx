@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 type ModalDataType = {
     open: boolean,
     title: string,
+    data?: FormDataType,
     handleSubmit: (values: FormDataType) => any
 }
 
@@ -136,6 +137,14 @@ const GridRows = () => {
                                 <Pen onClick={() => setModalData({
                                     title: 'Update Student',
                                     open: true,
+                                    data: {
+                                        firstName: val.firstName,
+                                        lastName: val.lastName,
+                                        email: val.email,
+                                        company: val.company.name,
+                                        phone: val.phone,
+                                        domain: val.domain,
+                                    },
                                     handleSubmit: (values) => { updateUser(val.id, values) }
                                 })}
                                     className='cursor-pointer'
@@ -163,7 +172,7 @@ const GridRows = () => {
                 </div>
             </div>
             <ToastContainer />
-            {modalData.open && <Modal handleSubmit={modalData.handleSubmit} title={modalData.title} showModal={modalData.open} setShowModal={(val) => setModalData(current => ({ ...current, open: val }))} />}
+            {modalData.open && <Modal handleSubmit={modalData.handleSubmit} title={modalData.title} showModal={modalData.open} data={modalData.data} setShowModal={(val) => setModalData(current => ({ ...current, open: val }))} />}
         </div>
     )
 }
