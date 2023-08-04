@@ -18,17 +18,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Images - PC
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://github.com/yunustaha/student-app/assets/48367134/62f7fa14-2ff5-4297-a285-3f03730e2748)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/yunustaha/student-app/assets/48367134/252db474-57c6-4ec9-be53-c98ccf8bef7b)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://github.com/yunustaha/student-app/assets/48367134/907024f3-7aaa-43c2-ad1d-57b997718264)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Images - Mobile
+
+![image](https://github.com/yunustaha/student-app/assets/48367134/dbaed813-6227-47e4-860f-8228a386be68)
+
+![image](https://github.com/yunustaha/student-app/assets/48367134/fd763918-0e6c-407c-9fe9-30fba61c8d4a)
+
+![image](https://github.com/yunustaha/student-app/assets/48367134/1e710554-48a9-4a64-a576-833a779417ca)
+
+![image](https://github.com/yunustaha/student-app/assets/48367134/c7ada373-5c5a-42e1-9d0d-f606e0c352aa)
+
+
