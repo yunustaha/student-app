@@ -154,7 +154,7 @@ const GridRows = () => {
                         </div>
                     )
                 })}
-                <div className='flex justify-end mt-8'>
+                <div className='flex justify-start lg:justify-end mt-8'>
                     <div className='flex gap-6 items-center'>
                         <div className='flex items-center mr-5'>
                             <div className='text-student-gray-grid text-sm font-normal mr-1'>Rows per page:</div>
