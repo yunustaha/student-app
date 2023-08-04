@@ -30,6 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![image](https://github.com/yunustaha/student-app/assets/48367134/1e710554-48a9-4a64-a576-833a779417ca)
 
-![image](https://github.com/yunustaha/student-app/assets/48367134/c7ada373-5c5a-42e1-9d0d-f606e0c352aa)
+![image](https://github.com/yunustaha/student-app/assets/48367134/381c0b9a-3f07-4e49-b2ed-4efc4113055f)
+
 
 
