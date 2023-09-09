@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import Logo from "../../components/Logo";
 import NavItem from "../../components/navbar/NavItem";
-import { Close } from '../Icons';
+import { Bookmark, Close, FileChartLine, GraduationCap, HomeLogo, SignOutAlt, SlidersSquare, UsdSquare } from '../Icons';
 
 type NavbarProps = {
     isOpen: boolean,
@@ -19,14 +19,14 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
             <div className="text-lg font-bold ">John Doe</div>
             <div className="text-student-orange text-sm font-medium ">Admin</div>
             <nav className="flex flex-col gap-y-4 ">
-                <NavItem href={'/dashboard'} src='/home-logo.svg' label='Home' />
-                <NavItem href={'/course'} src='/bookmark.svg' label='Course' />
-                <NavItem href={'/students'} src='/graduation-cap.svg' label='Student' />
-                <NavItem href={'/payment'} src='/usd-square.svg' label='Payment' />
-                <NavItem href={'/report'} src='/file-chart-line.svg' label='Report' />
-                <NavItem href={'/settings'} src='/sliders-v-square.svg' label='Settings' />
+                <NavItem href={'/dashboard'} icon={<HomeLogo/>} label='Home' />
+                <NavItem href={'/course'} icon={<Bookmark/>} label='Course' />
+                <NavItem href={'/students'} icon={<GraduationCap/>} label='Student' />
+                <NavItem href={'/payment'} icon={<UsdSquare/>} label='Payment' />
+                <NavItem href={'/report'} icon={<FileChartLine/>} label='Report' />
+                <NavItem href={'/settings'} icon={<SlidersSquare/>} label='Settings' />
             </nav>
-            <NavItem href={'/'} src='/sign-out-alt.svg' label='Logout' logoRight className="" />
+            <NavItem href={'/'} icon={<SignOutAlt/>} label='Logout' iconRight className="" />
         </div>
     )
 }
