@@ -14,10 +14,10 @@ const Menu: React.FC<MenuProps> = ({ children }) => {
     const router = useRouter();
     
     return (
-        <div className="flex h-full">
+        <header className="flex h-full">
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen}/>
-            <div className="flex flex-col w-full max-h-screen overflow-y-auto z-10">
-                <div className="flex sticky top-0 p-5 justify-between items-startr bg-white">
+            <div className="flex flex-col w-full max-h-screen overflow-y-auto">
+                <div className="flex sticky top-0 p-5 justify-between items-startr bg-white z-10">
                     <div className='lg:hidden flex flex-col w-10 h-5 gap-1 mr-5 cursor-pointer' onClick={() => {setIsOpen((current) => !current)}}>
                         <div className='bg-black w-full h-full rounded'></div>
                         <div className='bg-black w-full h-full rounded'></div>
@@ -30,7 +30,7 @@ const Menu: React.FC<MenuProps> = ({ children }) => {
                 </div>
                 <div>{children}</div>
             </div>
-        </div>
+        </header>
     )
 }
 
