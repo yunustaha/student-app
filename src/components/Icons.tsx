@@ -160,7 +160,7 @@ export const ArrowLeft: React.FC<IconProps> = ({ className, fill, onClick }) => 
     return (
         <svg onClick={onClick} className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="icon / arrow - left">
-                <path id="left" d="M15 18L9.07071 12.0707C9.03166 12.0317 9.03166 11.9683 9.07071 11.9293L15 6" stroke="#9FA2B4" strokeWidth="2" stroke-linecap="round" />
+                <path id="left" d="M15 18L9.07071 12.0707C9.03166 12.0317 9.03166 11.9683 9.07071 11.9293L15 6" stroke="#9FA2B4" strokeWidth="2" strokeLinecap="round" />
             </g>
         </svg>
     )
@@ -170,7 +170,7 @@ export const ArrowRight: React.FC<IconProps> = ({ className, fill, onClick }) =>
     return (
         <svg onClick={onClick} className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="icon / arrow - right">
-                <path id="right" d="M9 18L14.9293 12.0707C14.9683 12.0317 14.9683 11.9683 14.9293 11.9293L9 6" stroke="#9FA2B4" strokeWidth="2" stroke-linecap="round" />
+                <path id="right" d="M9 18L14.9293 12.0707C14.9683 12.0317 14.9683 11.9683 14.9293 11.9293L9 6" stroke="#9FA2B4" strokeWidth="2" strokeLinecap="round" />
             </g>
         </svg>
     )

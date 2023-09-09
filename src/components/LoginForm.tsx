@@ -1,35 +1,48 @@
 "use client"
 import React from 'react'
 import { useRouter } from 'next/navigation';
+import { Field, Form, Formik } from 'formik';
+
+const initialValues = {
+  loginMail: "",
+  loginPassword: "",
+};
+
+type LoginFormData = {
+  loginMail: string,
+  loginPassword: string
+}
 
 const LoginForm = () => {
   const router = useRouter();
 
-  const handleClick = () => {
+  const handleSubmit = (values: LoginFormData) => {
     router.push('/dashboard');
-  };
+  }
 
   return (
-    <>
-      <div className='flex flex-col items-center mt-12 w-full gap-y-5'>
-        <div className='flex flex-col text-student-gray items-start w-full gap-y-2'>
-          <div className='text-sm font-medium'>
-            Email
+    <Formik onSubmit={handleSubmit} initialValues={initialValues}>
+      <Form className='w-full'>
+        <div className='flex flex-col items-center text-student-gray gap-5'>
+          <div className='flex flex-col items-start w-full gap-2'>
+            <label className='text-sm font-medium' htmlFor='loginMail'>
+              Email
+            </label>
+            <Field required className='student-input' placeholder="Enter your email" type="email" id="loginMail" name="loginMail" />
           </div>
-          <input className='student-input' placeholder='Enter your email' />
-        </div>
-        <div className='flex flex-col text-student-gray items-start w-full gap-y-2'>
-          <div className='text-sm font-medium'>
-            Password
+          <div className='flex flex-col items-start w-full gap-y-2'>
+            <label className='text-sm font-medium' htmlFor='loginPassword'>
+              Password
+            </label>
+            <Field required className='student-input' placeholder="Mail adresinizi girin" type="text" id="loginPassword" name="loginPassword" />
           </div>
-          <input className='student-input' placeholder='Enter your password' />
         </div>
-      </div>
-      <div className='mt-8 w-full'>
-        <button className='student-button' onClick={handleClick}>SIGN IN</button>
-      </div>
-    </>
+        <div className='mt-8'>
+          <button className='student-button hover:brightness-95' type="submit" value='submit'>SIGN IN</button>
+        </div>
+      </Form>
+    </Formik>
   )
 }
-      
+
 export default LoginForm

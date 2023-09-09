@@ -5,11 +5,13 @@
 body {
 }
 
-.student-input {
-  @apply border border-solid border-student-border rounded text-xs placeholder:text-student-gray-light w-full h-11 p-4
-}
+@layer components {
+  .student-input {
+    @apply border border-solid border-student-border rounded text-xs placeholder:text-student-gray-light w-full h-11 p-4
+  }
 
-.student-button {
-  @apply
-  bg-student-orange w-full p-3 rounded text-white text-sm font-medium
+  .student-button {
+    @apply
+    bg-student-orange w-full p-3 rounded text-white text-sm font-medium
+}
 }
