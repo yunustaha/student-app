@@ -19,14 +19,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             <div className="text-lg font-bold ">John Doe</div>
             <div className="text-student-orange text-sm font-medium ">Admin</div>
             <nav className="flex flex-col gap-y-4 ">
-                <SidebarItem href={'/dashboard'} icon={<HomeLogo />} label='Home' />
-                <SidebarItem href={'/course'} icon={<Bookmark />} label='Course' />
-                <SidebarItem href={'/students'} icon={<GraduationCap />} label='Student' />
-                <SidebarItem href={'/payment'} icon={<UsdSquare />} label='Payment' />
-                <SidebarItem href={'/report'} icon={<FileChartLine />} label='Report' />
-                <SidebarItem href={'/settings'} icon={<SlidersSquare />} label='Settings' />
+                <SidebarItem href={'/dashboard'} icon={HomeLogo} label='Home' />
+                <SidebarItem href={'/course'} icon={Bookmark} label='Course' />
+                <SidebarItem href={'/students'} icon={GraduationCap} label='Student' />
+                <SidebarItem href={'/payment'} icon={UsdSquare} label='Payment' />
+                <SidebarItem href={'/report'} icon={FileChartLine} label='Report' />
+                <SidebarItem href={'/settings'} icon={SlidersSquare} label='Settings' />
             </nav>
-            <SidebarItem href={'/'} icon={<SignOutAlt />} label='Logout' iconRight />
+            <SidebarItem href={'/'} icon={SignOutAlt} label='Logout' iconRight />
         </div>
     )
 }
