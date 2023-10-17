@@ -2,6 +2,7 @@
 import React from 'react'
 import { useRouter } from 'next/navigation';
 import { Field, Form, Formik } from 'formik';
+import Button from '@/components/Button';
 
 const initialValues = {
   loginMail: "",
@@ -34,11 +35,11 @@ const LoginForm = () => {
             <label className='text-sm font-medium' htmlFor='loginPassword'>
               Password
             </label>
-            <Field required className='student-input' placeholder="Mail adresinizi girin" type="text" id="loginPassword" name="loginPassword" />
+            <Field required className='student-input' placeholder="Enter your password" type="text" id="loginPassword" name="loginPassword" />
           </div>
         </div>
         <div className='mt-8'>
-          <button className='student-button hover:brightness-95' type="submit" value='submit'>SIGN IN</button>
+          <Button type="submit" value='submit'>SIGN IN</Button>
         </div>
       </Form>
     </Formik>

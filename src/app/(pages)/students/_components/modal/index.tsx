@@ -1,6 +1,8 @@
 import React from "react";
-import { Close } from "../Icons";
+import { Close } from "../../../../../components/Icons";
 import { useFormik } from "formik"
+import Button from "@/components/Button";
+import Input from "@/components/Input";
 
 
 type ModalProps = {
@@ -54,81 +56,74 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, handleSubmit, ti
                                 <form onSubmit={formik.handleSubmit}>
 
                                     <div className="relative p-6 flex flex-col gap-4">
-                                        <input
+                                        <Input
                                             id="firstName"
                                             name="firstName"
                                             type="text"
                                             required
                                             placeholder="Name"
-                                            className='student-input'
                                             value={formik.values.firstName}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
-                                        <input
+                                        <Input
                                             id="lastName"
                                             name="lastName"
                                             type="text"
                                             required
                                             placeholder="Last Name"
-                                            className='student-input'
                                             value={formik.values.lastName}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
-                                        <input
+                                        <Input
                                             id="email"
                                             name="email"
                                             type="email"
                                             required
                                             placeholder="Email"
-                                            className='student-input'
                                             value={formik.values.email}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
-                                        <input
+                                        <Input
                                             id="phone"
                                             name="phone"
                                             type="tel"
                                             required
                                             placeholder="Phone"
-                                            className='student-input'
                                             value={formik.values.phone}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
-                                        <input
+                                        <Input
                                             id="domain"
                                             name="domain"
                                             type="text"
                                             required
                                             placeholder="Website"
-                                            className='student-input'
                                             value={formik.values.domain}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
-                                        <input
+                                        <Input
                                             id="company"
                                             name="company"
                                             type="text"
                                             required
                                             placeholder="Company"
-                                            className='student-input'
                                             value={formik.values.company}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
                                         />
                                     </div>
                                     <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                                        <button
-                                            className={"student-button"}
+                                        <Button
                                             type="submit"
                                             value='submit'
                                         >
                                             Save
-                                        </button>
+                                        </Button>
                                     </div>
                                 </form>
                             </div>

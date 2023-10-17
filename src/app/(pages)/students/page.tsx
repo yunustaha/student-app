@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useState, createContext } from 'react'
-import Grid from '@/components/grid/Grid';
+import Grid from '@/app/(pages)/students/_components/grid/Grid';
+import Button from '@/components/Button';
+import Input from '@/components/Input';
 
 type GridContextType = {
     newStudentOpen: boolean,
@@ -20,11 +22,10 @@ const Students = () => {
                 <div className='text-2xl mb-4 lg:mb-0 lg:text-2xl font-bold'>Students List</div>
                 <div className='flex gap-6 items-center'>
                     <div className='lg:w-52'>
-                        <input className='student-input' onChange={(e) => setGridVal((current) => ({ ...current, search: e.target.value }))} placeholder='Search...'></input>
+                        <Input onChange={(e) => setGridVal((current) => ({ ...current, search: e.target.value }))} placeholder='Search...'></Input>
                     </div>
                     <div className='lg:w-52'>
-                        <button onClick={() => setGridVal((current) => ({ ...current, newStudentOpen: true }))}
-                            className='student-button '>ADD STUDENT</button>
+                        <Button onClick={() => setGridVal((current) => ({ ...current, newStudentOpen: true }))}>ADD STUDENT</Button>
                     </div>
                 </div>
             </div>

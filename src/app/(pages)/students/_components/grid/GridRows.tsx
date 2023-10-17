@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useEffect, useState, useContext } from 'react'
-import { ArrowLeft, ArrowRight, Dropdown, Pen, Trash } from '../Icons'
+import { ArrowLeft, ArrowRight, Dropdown, Pen, Trash } from '../../../../../components/Icons'
 import axios from 'axios'
 import { Root, User } from './UserModel'
 import { GridContext } from '@/app/(pages)/students/page'

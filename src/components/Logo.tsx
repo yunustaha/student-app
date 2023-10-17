@@ -6,11 +6,11 @@ type LogoProps = {
     className?: string
 }
 
-const Logo: React.FC<LogoProps> = ({ size, className }) => {
+const Logo: React.FC<LogoProps> = ({ size }) => {
     return (
-        <div className={classNames('flex gap-3', className)}>
+        <div className={'flex gap-3'}>
             <div className='w-[0.4rem] bg-student-yellow'></div>
-            <div className={classNames('text-3xl font-bold', size == 'md' && 'text-xl')} >MANAGE COURSES</div>
+            <div className={classNames('text-3xl font-bold', { 'text-xl': size == 'md' })} >MANAGE COURSES</div>
         </div>
     )
 }

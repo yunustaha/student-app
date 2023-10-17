@@ -1,24 +1,21 @@
-'use client';
-import React, { useState } from 'react'
-import Navbar from './Navbar'
-import { CaretCircle, Bell } from '../Icons'
+import React from 'react'
+import { CaretCircle, Bell } from '../../../../components/Icons'
 import { useRouter } from 'next/navigation';
 
-
-type MenuProps = {
+type NavbarProps = {
+    isOpen: boolean,
+    setIsOpen: (value: boolean | ((current: boolean) => boolean)) => void,
     children: React.ReactNode,
 }
 
-const Menu: React.FC<MenuProps> = ({ children }) => {
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen, children }) => {
     const router = useRouter();
-    
+
     return (
-        <header className="flex h-full">
-            <Navbar isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <>
             <div className="flex flex-col w-full max-h-screen overflow-y-auto">
                 <div className="flex sticky top-0 p-5 justify-between items-startr bg-white z-10">
-                    <div className='lg:hidden flex flex-col w-10 h-5 gap-1 mr-5 cursor-pointer' onClick={() => {setIsOpen((current) => !current)}}>
+                    <div className='lg:hidden flex flex-col w-10 h-5 gap-1 mr-5 cursor-pointer' onClick={() => { setIsOpen((current) => !current) }}>
                         <div className='bg-black w-full h-full rounded'></div>
                         <div className='bg-black w-full h-full rounded'></div>
                         <div className='bg-black w-full h-full rounded'></div>
@@ -30,8 +27,8 @@ const Menu: React.FC<MenuProps> = ({ children }) => {
                 </div>
                 <div>{children}</div>
             </div>
-        </header>
+        </>
     )
 }
 
-export default Menu
+export default Navbar
