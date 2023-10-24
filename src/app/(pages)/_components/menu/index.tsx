@@ -12,10 +12,12 @@ const Menu: React.FC<MenuProps> = ({ children }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     return (
-        <header className="flex h-full">
+        <div className="flex h-full w-full">
             <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Navbar isOpen={isOpen} setIsOpen={setIsOpen} children={children} />
-        </header>
+            <header className='h-full w-full'>
+                <Navbar isOpen={isOpen} setIsOpen={setIsOpen} children={children} />
+            </header>
+        </div>
     )
 }
 

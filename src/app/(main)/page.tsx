@@ -10,12 +10,12 @@ export default function Home() {
         <div className='flex flex-col items-center bg-white rounded-2xl gap-4 lg:gap-11 w-11/12 md:w-2/3 lg:w-2/6 px-8 py-11 '>
           <Logo size='lg' />
           <div className='flex flex-col items-center gap-2'>
-            <div className='text-2xl font-semibold'>
+            <h1 className='text-2xl font-semibold'>
               SIGN IN
-            </div>
-            <div className='text-sm font-normal text-student-gray'>
+            </h1>
+            <p className='text-sm font-normal text-student-gray'>
               Enter your credentials to access your account
-            </div>
+            </p>
           </div>
           <LoginForm />
           <div className='text-sm font-normal'>

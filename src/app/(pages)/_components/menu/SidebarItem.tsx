@@ -23,7 +23,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, iconRight,
             })
         } >
             <Icon fill='current' className='fill-current' />
-            <div>{label}</div>
+            <span>{label}</span>
         </Link>
     )
 }

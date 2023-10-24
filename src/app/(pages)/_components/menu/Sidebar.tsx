@@ -12,7 +12,7 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
 
     return (
-        <div className={`${isOpen ? '-left-0' : '-left-[100%] lg:left-0'} z-20 fixed lg:relative flex flex-col bg-student-beige min-w-[270px] h-screen items-center justify-around ease-in-out duration-500`}>
+        <aside className={`${isOpen ? '-left-0' : '-left-[100%] lg:left-0'} z-20 fixed lg:relative flex flex-col bg-student-beige min-w-[270px] h-screen items-center justify-around ease-in-out duration-500`}>
             {isOpen && <div className='flex justify-end w-full cursor-pointer mr-10'> <Close className='h-8 w-8' onClick={() => setIsOpen((current) => !current)} /></div>}
             <Logo size="md" />
             <Image width={128} height={128} className="rounded-full " src={'/avatar.png'} alt={"Profile Photo"} />
@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
                 <SidebarItem href={'/settings'} icon={SlidersSquare} label='Settings' />
             </nav>
             <SidebarItem href={'/'} icon={SignOutAlt} label='Logout' iconRight />
-        </div>
+        </aside>
     )
 }
 
